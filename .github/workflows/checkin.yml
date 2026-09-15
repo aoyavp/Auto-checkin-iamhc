@@ -46,11 +46,4 @@ jobs:
               echo "deleted: $run_id"
               gh run delete $run_id || true
             fi
-          done
-          
-# 新增：保活步骤，防止 60 天无活动导致 schedule 被自动禁用
-      - name: Keepalive Workflow
-        if: always()
-        uses: gautamkrishnar/keepalive-workflow@v2
-        with:
-          gh_token: ${{ github.token }}
+          done        
