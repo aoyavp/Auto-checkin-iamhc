@@ -8,7 +8,7 @@ on:
 
 jobs:
   keepalive:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     permissions:
       contents: write # 必须赋予写权限，以便能够提交代码
     steps:
